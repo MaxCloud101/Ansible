@@ -1,0 +1,28 @@
+[servers1]
+vagrant1 ansible_ssh_host=ec2-54-70-142-172.us-west-2.compute.amazonaws.com ansible_ssh_user=ubuntu
+vagrant2 ansible_ssh_host=ec2-54-70-142-172.us-west-2.compute.amazonaws.com ansible_ssh_user=ubuntu
+
+[servers2]
+vagrant1 ansible_ssh_host=ec2-54-70-142-172.us-west-2.compute.amazonaws.com ansible_ssh_user=ubuntu
+vagrant2 ansible_ssh_host=ec2-54-70-142-172.us-west-2.compute.amazonaws.com ansible_ssh_user=ubuntu
+
+[servers3]
+vagrant1 ansible_ssh_host=ec2-54-70-142-172.us-west-2.compute.amazonaws.com ansible_ssh_user=ubuntu
+vagrant2 ansible_ssh_host=ec2-54-70-142-172.us-west-2.compute.amazonaws.com ansible_ssh_user=ubuntu
+
+[grupos:children]
+servers1
+servers2
+
+[all:vars]
+ntp_server=ntp.ubuntu.com
+
+[servers1:vars]
+db_primary_host=rhodeisland.example.com
+db_primary_port=5432
+db_replica_host=virginia.example.com
+db_name=widget_production
+db_user=widgetuser
+db_password=pFmMxcyD;Fc6)6
+rabbitmq_host=pennsylvania.example.com
+rabbitmq_port=5672
