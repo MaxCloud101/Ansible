@@ -1,0 +1,17 @@
+- name: show return value of command module
+  hosts: webservers
+  sudo: True
+
+  tasks:
+    - debug: var=ansible_distribution
+
+    - name: capture output of id command
+      command: id -un
+      register: login
+    - debug: var=login
+
+    - name: Run myprog
+      command: /opt/myprog
+      register: result
+      ignore_errors: True
+    - debug: var=result

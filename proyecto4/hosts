@@ -1,0 +1,2 @@
+[webservers]
+testserver ansible_ssh_host=ec2-54-70-142-172.us-west-2.compute.amazonaws.com ansible_ssh_user=ubuntu
