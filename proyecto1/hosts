@@ -1,1 +1,1 @@
-testserver ansible_ssh_host=ec2-54-70-142-172.us-west-2.compute.amazonaws.com ansible_ssh_user=ubuntu ansible_ssh_private_key_file=/home/max/Documents/myDocumentation/ansible/ec2/AnsibleKP.pem
+testserver ansible_ssh_host=ec2-54-70-142-172.us-west-2.compute.amazonaws.com ansible_ssh_user=ubuntu ansible_ssh_private_key_file=AnsibleKP.pem
